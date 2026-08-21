@@ -27,13 +27,17 @@ function calcularTroco(){
         paragrafoResultado.textContent = `
             Troco = ${valorDoTrocoConvertido}
         `
-        else {
+        else if (qtd < 0) {
             let local = -(valorDoTroco)
             let local2 = local.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})
 
             paragrafoResultado.textContent = `
             Dinheiro insuficiente. Faltam = ${local2}
         `
+        } else {
+            paragrafoResultado.textContent = `
+                Sem troco, obrigado
+            `
         }
     } else {
         paragrafoResultado.textContent = `
