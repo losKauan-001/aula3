@@ -51,6 +51,4 @@ function calcularTroco(){
             digite um valor valido
         `
     }
-
-    prec.value = ""
 }
